@@ -2,15 +2,18 @@
 import { useEffect, useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 
-interface Movie {
+export interface Movie {
   videoUrl: string;
   thumbnailUrl: string;
   title: string;
   description: string;
+  duration?: string;
+  genre?: string;
+  favorite?: boolean;
 }
 
 const getBillboardMovie = async () => {
-  const movie = await fetch("/api/movies");
+  const movie = await fetch("/api/movie");
   const response = await movie.json();
   return response;
 };

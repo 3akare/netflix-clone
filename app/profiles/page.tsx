@@ -19,7 +19,12 @@ const Profile = () => {
           >
             <div className="group flex-row w-44 mx-auto">
               <div className="size-44 rounded-md flex flex-col items-center justify-center border-2 border-transparent group-hover:cursor-pointer group-hover:border-white overflow-hidden">
-                <Image src={profile} alt="profile" className="size-44"></Image>
+                <Image
+                  src={profile}
+                  alt="profile"
+                  className="size-44"
+                  priority
+                ></Image>
               </div>
               <div className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
                 David
