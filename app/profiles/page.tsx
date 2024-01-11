@@ -3,6 +3,7 @@
 import Image from "next/image";
 import profile from "@/public/images/default-blue.png";
 import { useRouter } from "next/navigation";
+import { auth } from "@/lib/firebase";
 
 const Profile = () => {
   const router = useRouter();
@@ -27,7 +28,7 @@ const Profile = () => {
                 ></Image>
               </div>
               <div className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
-                David
+                {auth.currentUser?.displayName || "User"}
               </div>
             </div>
           </div>
